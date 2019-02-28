@@ -6,13 +6,13 @@
 */
 
 import videojs from 'video.js'
-import videoPlayer from '../components/player.vue'
+import vjsPlayer from '../components/player.js'
 
 const install = function (Vue) {
-  Vue.component(videoPlayer.name, videoPlayer)
+  Vue.component(vjsPlayer.name, vjsPlayer)
 }
 
-const vvjsPlayer = { videojs, videoPlayer, install }
+const vvjsPlayer = { videojs, vjsPlayer, install }
 
 export default vvjsPlayer
-export { videojs, videoPlayer, install }
+export { videojs, vjsPlayer, install }

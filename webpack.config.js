@@ -2,11 +2,13 @@ var path = require('path')
 var webpack = require('webpack')
 
 module.exports = {
-  entry: './src/main.js',
+  entry: './src/lib/index.js',
   output: {
     path: path.resolve(__dirname, './dist'),
     publicPath: '/dist/',
-    filename: 'build.js'
+    filename: 'vue-vjs-player.js',
+    library: 'vueVjsPlayer',
+    libraryTarget: 'umd'
   },
   module: {
     rules: [
@@ -43,6 +45,10 @@ module.exports = {
     alias: {
       'vue$': 'vue/dist/vue.esm.js'
     },
+    modules: [
+      path.resolve(__dirname, 'src'),
+      path.resolve(__dirname, 'node_modules')
+    ],
     extensions: ['*', '.js', '.vue', '.json']
   },
   devServer: {

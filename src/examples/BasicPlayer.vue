@@ -1,17 +1,21 @@
 <template>
   <div>
-    <vue-vjs-player
+    <vjs-player
       ref="video_play"
       class="video-js"
       :options="playerOptions"
       :playsinline="true"
-    ></vue-vjs-player>
+    ></vjs-player>
   </div>
 </template>
 
 <script>
 import 'video.js/dist/video-js.min.css'
-
+// import 'videojs-flash'
+import videojs from 'video.js'
+// if (!window.videojs) {
+//   window.videojs = videojs
+// }
 export default {
   name: "Basic-Player",
   data() {
@@ -23,12 +27,17 @@ export default {
         muted: false,
         language: 'en',
         playbackRates: [0.7, 1.0, 1.5, 2.0],
+        flash: { hls: { withCredentials: false } },
+        html5: { hls: { withCredentials: false } },
         sources: [{
           // type: 'video/mp4'
-          type: 'application/x-mpegURL',
-          src: 'https://72757-playvod.jdcloud.com/vod/product/2019/0226/179604/210/output.m3u8'
+          // type: 'application/x-mpegURL',
+          type: 'video/x-flv',
+          // src: 'https://72757-playvod.jdcloud.com/vod/product/2019/0210/131575/209/output.m3u8'
+          src: 'https://72757-playvod.jdcloud.com/vod/product/2019/0128/105346/144/output.flv'
+
         }],
-        poster: "https://surmon-china.github.io/vue-quill-editor/static/images/surmon-1.jpg",
+        // poster: "https://surmon-china.github.io/vue-quill-editor/static/images/surmon-1.jpg",
       }
     }
   },
