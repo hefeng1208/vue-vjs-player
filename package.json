@@ -1,7 +1,7 @@
 {
   "name": "vue-vjs-player",
   "description": "vjs for vuejs",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "author": "hefeng26 <hefeng3@jd.com>",
   "main": "dist/vue-vjs-player.js",
   "unpkg": "dist/vue-video-player.js",
