@@ -1,12 +1,15 @@
 {
   "name": "vue-vjs-player",
-  "description": "vjs for vuejs",
-  "version": "1.0.2",
-  "author": "hefeng26 <hefeng3@jd.com>",
+  "description": "video.js v7 for vuejs",
+  "version": "1.0.3",
   "main": "dist/vue-vjs-player.js",
   "unpkg": "dist/vue-video-player.js",
   "license": "MIT",
   "private": false,
+  "author": {
+    "name": "hefeng1208",
+    "email": "fedevors@gmail.com"
+  },
   "scripts": {
     "dev": "cross-env NODE_ENV=development webpack-dev-server --open --hot",
     "build": "cross-env NODE_ENV=production webpack --progress --hide-modules"
@@ -20,6 +23,17 @@
     "> 1%",
     "last 2 versions",
     "not ie <= 8"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/hefeng1208/vue-vjs-player.git"
+  },
+  "keywords": [
+    "vue-video-player",
+    "vue video player",
+    "video player",
+    "vue player",
+    "vue video"
   ],
   "devDependencies": {
     "babel-core": "^6.26.0",
